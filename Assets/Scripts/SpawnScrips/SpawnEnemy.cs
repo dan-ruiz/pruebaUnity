@@ -10,7 +10,7 @@ public class SpawnEnemy : MonoBehaviour
     // Tiempo de intervalo entre spawns
     public float spawnInterval = 20f; // Verificar si el tiempo esta bien asi o si debe ser mayor la espera
     // Cantidad máxima de enemigos a renderizar
-    public int maxWavesOfEnemies = 5; // ??? Cual seria la cantidad de oleadas
+    public int maxWavesOfEnemies = 6; // ??? Cual seria la cantidad de oleadas
     // Contador de enemigos instanciados
     private int enemiesSpawned = 0;
 

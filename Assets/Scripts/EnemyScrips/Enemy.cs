@@ -36,10 +36,8 @@ public class Enemy : MonoBehaviour
 
     private void Die()
     {
-        // Calcular la probabilidad basada en los enemigos restantes y los sprites de muerte restantes
-        int enemiesRemaining = SpawnEnemy.totalEnemiesSpawned - SpawnEnemy.deathSpritesGenerated;
-        int deathSpritesRemaining = spawnManager.maxDeathSprites - SpawnEnemy.deathSpritesGenerated;
-        float deathSpriteProbability = (float)deathSpritesRemaining / enemiesRemaining;
+        // Probabilidad fija de generar un sprite de muerte
+        float deathSpriteProbability = 10f / 30f;
 
         // Verificar si se cumplen las condiciones para generar un sprite de muerte
         if (Random.value < deathSpriteProbability)
@@ -51,6 +49,7 @@ public class Enemy : MonoBehaviour
 
         enemyPool.ReturnEnemyToPool(gameObject); // Desactivar el enemigo del pool
     }
+
 
     // Método para establecer el pool de enemigos
     public void SetPool(SpawnEnemyPool pool)
